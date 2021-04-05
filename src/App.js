@@ -3,18 +3,18 @@ import './App.css';
 
 import City from './components/City';
 import {Container} from 'react-bootstrap';
+import Fetch from '../src/hooks/Fetch';
+import { API_BASE_URL, API_KEY } from "../apis/config";
+import { useEffect } from 'react';
 
 const App = () => {
+// return values destructured from Fetch.js
+  const {data, error, isLoading, setUrl} = Fetch();
+
   return (
     <Container className="App">
-      {/* <WeatherCard 
-              dt={1602104400 * 1000}
-              temp_min="22.67"
-              temp_max="24.39"
-              main="Clear"
-              humidity="Humid"
-              icon="11d"/> */}
-              <City />
+
+              <City onSearch={(city) => setUrl(`${API_BASE_URL}data/2.5/forecast?${city}&appid=${API_KEY}&units=imperial`)} />
     </Container>
   );
 }
