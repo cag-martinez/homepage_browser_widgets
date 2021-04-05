@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 
-const useState = (initialUrl) => {
+const Fetch = (initialUrl) => {
   // state variables
   const [data, setData] = useState(null);
   const [error, setEerror] = useState(null);
   const [isLoading, setIsloading] = useState(null);
   const [url, setUrl] = useState(initialUrl);
 
-  useEffect =
+  useEffect
     (() => {
       setIsloading(true);
       fetch(url)
