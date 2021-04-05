@@ -27,10 +27,12 @@ const City = () => {
       {/* button */}
       <Row>
         <Col>
-          <Button onClick={{onsearch}}> Check Weather </Button>
+          <Button onClick={onsearch} >Check Weather</Button>
         </Col>
       </Row>
-    </>
+      
+  </>
+  
   );
 };
 

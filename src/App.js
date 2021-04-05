@@ -4,7 +4,7 @@ import './App.css';
 import City from './components/City';
 import {Container} from 'react-bootstrap';
 
-function App() {
+const App = () => {
   return (
     <Container className="App">
       {/* <WeatherCard 
