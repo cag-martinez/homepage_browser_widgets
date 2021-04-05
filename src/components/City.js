@@ -5,18 +5,18 @@ import { API_BASE_URL, API_KEY } from "../apis/config";
 const City = () => {
   const [city, setCity] = useState("");
   // function to fetch data from the API
-  const onSearch = () => {
-    fetch(`${API_BASE_URL}/data/2.5/forecast?q=${city}&appid=${API_KEY}`)
-      .then((response) => response.json())
-      .then((result) => console.log(result));
-  };
+//   const onSearch = () => {
+//     fetch(`${API_BASE_URL}/data/2.5/forecast?q=${city}&appid=${API_KEY}`)
+//       .then((response) => response.json())
+//       .then((result) => console.log(result));
+//   };
 
   /* on key down event when user presses enter */
-  const onKeyDown = (event) => {
-    if (event.keyCode === 13) {
-      onSearch();
-    }
-  };
+  // const onKeyDown = (event) => {
+  //   if (event.keyCode === 13) {
+  //     onSearch();
+  //   }
+  // };
 
   return (
     <>
@@ -36,7 +36,7 @@ const City = () => {
             //value of the selected city : first parameter line 5
             value={city}
             // key down event for enter key
-            onKeyDown={onKeyDown}
+            // onKeyDown={onKeyDown}
           />
         </Col>
       </Row>
