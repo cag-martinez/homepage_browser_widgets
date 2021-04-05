@@ -1,8 +1,16 @@
 import React, {useState} from "react";
 import {Row, Col, FormControl, Button} from "react-bootstrap";
+import {API_BASE_URL, API_KEY} from "../apis/config";
 
 const City = () => {
   const [city, setCity] = useState("");
+
+  const onSearch = () => {
+      fetch (`${API_BASE_URL}/data/2.5/forecast?q=${city}&appid=${API_KEY}`)
+      .then((response) => response.json())
+      .then((result) => console.log(result));
+  }
+
   return (
     <>
       {/* heading */}
@@ -27,10 +35,9 @@ const City = () => {
       {/* button */}
       <Row>
         <Col>
-          <Button onClick={onsearch} >Check Weather</Button>
+          <Button onClick={onSearch} >Check Weather</Button>
         </Col>
-      </Row>
-      
+      </Row>  
   </>
   
   );
