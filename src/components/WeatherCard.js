@@ -1,7 +1,7 @@
 import React from "react";
 import {Card} from "react-bootstrap";
 
-const WeatherCard = ({ dt, temp_min, temp_max, humidity, main, icon }) => {
+const WeatherCard = ({ dt, temp, temp_min, temp_max, humidity, main, icon }) => {
   // creating a date object
   const date = new Date(dt);
   return (
@@ -15,6 +15,7 @@ const WeatherCard = ({ dt, temp_min, temp_max, humidity, main, icon }) => {
       <Card.Body>
         <Card.Title>{main}</Card.Title>
         <Card.Text>
+          <p>Currently: {temp}</p>
             <p> Min: {temp_min}</p>
             <p> Max: {temp_max}</p>
             <p> humidity: {humidity}</p>
