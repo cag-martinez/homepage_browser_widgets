@@ -16,7 +16,7 @@ const App = () => {
     <Container className="App">
       <City
         onSearch={(city) =>
-          setUrl(`${API_BASE_URL}data/2.5/forecast?q=${city}&appid=${API_KEY}`)
+          setUrl(`${API_BASE_URL}data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric`)
         }
       />
       {/* conditional render */}
