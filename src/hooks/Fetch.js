@@ -3,7 +3,7 @@ import {useState, useEffect} from "react";
 const Fetch = (initialUrl) => {
   // state variables
   const [data, setData] = useState(null);
-  const [error, setEerror] = useState(null);
+  const [error, setError] = useState(null);
   const [isLoading, setIsloading] = useState(null);
   const [url, setUrl] = useState(initialUrl);
 
@@ -15,10 +15,11 @@ const Fetch = (initialUrl) => {
         .then((data) => {
           setIsloading(false);
           setData(data);
+          console.log(data)
         })
         .catch((error) => {
           setIsloading(false);
-          setEerror(error);
+          setError(error);
         });
     },
     [url]);

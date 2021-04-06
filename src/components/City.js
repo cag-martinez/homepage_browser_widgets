@@ -28,7 +28,7 @@ const City = ({onSearch}) => {
       {/* button */}
       <Row>
         <Col>
-          <Button onClick={ () => onSearch(city)}>Check Weather</Button>
+          <Button onClick={() => onSearch(city)}>Check Weather</Button>
         </Col>
       </Row>
     </>
