@@ -5,7 +5,7 @@ import WeatherCard from "./WeatherCard";
 const List = ({ displayWeather }) => {
   return (
     <Row>
-      {displayWeather.map(({ dt, main, weather}) => (
+      {displayWeather.map(({dt, main, weather}) => (
         <Col key={dt}>
           <WeatherCard
             temp={main.temp}

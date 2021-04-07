@@ -1,11 +1,11 @@
 import React from "react";
-import {Card} from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
-const WeatherCard = ({ dt, temp, temp_min, temp_max, humidity, main, icon }) => {
+const WeatherCard = ({ dt, temp, temp_min, temp_max, main, icon }) => {
   // creating a date object
   const date = new Date(dt);
   return (
-    <Card style={{ width: '15rem' }}>
+    <Card style={{ width: "10rem" }}>
       <Card.Img
         variant="top"
         // passing icon prop for icon code
@@ -15,11 +15,10 @@ const WeatherCard = ({ dt, temp, temp_min, temp_max, humidity, main, icon }) => 
       <Card.Body>
         <Card.Title>{main}</Card.Title>
         <Card.Text>
+          <p> {date.toDateString()}</p>
           <p>Currently: {temp}</p>
-            <p> Min: {temp_min}</p>
-            <p> Max: {temp_max}</p>
-            <p> humidity: {humidity}</p>
-
+          <p> Min: {temp_min}</p>
+          <p> Max: {temp_max}</p>
         </Card.Text>
       </Card.Body>
     </Card>
